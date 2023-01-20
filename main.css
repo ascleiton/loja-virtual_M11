@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: rgb(34, 101, 245);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    margin-bottom: 56px;
+}
+
+header h1 {
+    color: #fff;
+    font-style: italic;
+}
+
+header ul li{
+    display: inline;
+    margin-left: 16px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.sobrealoja {
+    display: flex;
+    margin-bottom: 56px;
+}
+
+.sobrealoja img{
+    margin-right: 32px;
+    width: 500px;
+}
+
+h2 {
+    color: rgb(34, 101, 245);
+    font-style: italic;
+    padding-bottom: 16px;
+    border-bottom: 2px solid rgb(34, 101, 245);
+    margin-bottom: 32px;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 24.25%);
+    column-gap: 1%;
+}
+
+.produto {
+    text-align: center;
+}
+
+.produto img {
+    max-width: 100%;
+    max-height: 200px;
+}
+
+.produto p {
+    font-size: small;
+    padding: 8px 0;
+}
+
+.produto button {
+    background-color: rgb(34, 101, 245);
+    padding: 8px;
+    border: none;
+    width: 100%;
+    color: #fff;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 640px) {
+    
+    .container {
+        max-width: 90%;
+    }
+
+    header .container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    ul li a {
+        display: block;
+    }
+
+    .sobrealoja {
+        display: block;
+    }
+
+    .sobrealoja img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .produtos {
+        display: block;
+    } 
+
+}
+
+@media screen and (min-width:641px) and (max-width:1023px) {
+    .container {
+        width: 90%;
+    }
+
+    .sobrealoja{
+        display: block;
+    }
+
+    .sobrealoja img {
+        width: 100%;
+    }
+
+    .produtos {
+        display: grid;
+        grid-template-columns: repeat(2, 49%);
+        column-gap: 1%;
+    }
+}
